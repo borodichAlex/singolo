@@ -29,6 +29,11 @@
 		&--active {
 			color: #f06c64;
 		}
+
+		&:hover {
+			cursor: pointer;
+			text-decoration: underline;
+		}
 	}
 
 
