@@ -85,3 +85,20 @@ select {
   font-weight: 400;
   src: url("../fonts/Lato/Lato-Regular.ttf") format("truetype");
 }
+.link {
+  text-decoration: none;
+}
+
+.header {
+  font-family: Lato, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.logo {
+  color: #ffffff;
+  font-size: 1.5625rem;
+}
+
+.nav-menu__link {
+  color: #ffffff;
+}
