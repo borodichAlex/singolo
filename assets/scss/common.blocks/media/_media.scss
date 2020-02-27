@@ -1,0 +1,35 @@
+.media {
+
+	&:nth-child(odd) {
+		clear: left;
+	}
+
+	&__icon {
+		margin-top: 6px;
+		margin-right: 1.4285em;
+		border: 2px solid $color-heading;
+		float: left;
+		width: 59px;
+		height: 59px;
+		border-radius: 100%;
+		position: relative;
+
+		& > svg {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	&__body {
+		overflow: hidden;
+	}
+
+	&__subtitle {
+		max-height: 7em;
+		line-height: 21.56px;
+		margin-top: 3px;
+	}
+
+}
