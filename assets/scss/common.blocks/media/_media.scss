@@ -1,0 +1,20 @@
+.media {
+
+	&:nth-child(odd) {
+		clear: left;
+	}
+
+	&__icon {
+		padding: .875em;
+		margin-right: 1.4285em;
+		border: 2px solid $color-heading;
+		border-radius: 50%;
+
+		float: left;
+	}
+
+	&__title {
+		margin-bottom: .833em;
+	}
+
+}
