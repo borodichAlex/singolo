@@ -1,0 +1,33 @@
+.slider {
+	background-color: #f06c64;
+	border-bottom: 6px solid #ea676b;
+
+	padding: 54px 111px 83px 112px;
+
+	display: flex;
+
+	position: relative;
+
+	&__arrow {
+		position: absolute;
+		top: 47.5%;
+		line-height: 0;
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		> svg {
+			opacity: .25;
+		}
+
+		&--left {
+			left: 42px;
+		}
+
+		&--right {
+			right: 40px;
+			transform: rotate(180deg);
+		}
+	}
+}
