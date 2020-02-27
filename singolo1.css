@@ -65,40 +65,121 @@ select {
   font-family: "Lato";
   font-style: normal;
   font-weight: 900;
-  src: url("../fonts/Lato/Lato-Black.ttf") format("truetype");
+  src: url("./assets/fonts/Lato/Lato-Black.ttf") format("truetype");
 }
 @font-face {
   font-family: "Lato";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/Lato/Lato-Bold.ttf") format("truetype");
+  src: url("./assets/fonts/Lato/Lato-Bold.ttf") format("truetype");
 }
 @font-face {
   font-family: "Lato";
   font-style: normal;
   font-weight: 300;
-  src: url("../fonts/Lato/Lato-Light.ttf") format("truetype");
+  src: url("./assets/fonts/Lato/Lato-Light.ttf") format("truetype");
 }
 @font-face {
   font-family: "Lato";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/Lato/Lato-Regular.ttf") format("truetype");
+  src: url("./assets/fonts/Lato/Lato-Regular.ttf") format("truetype");
 }
+body {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+}
+
 .link {
   text-decoration: none;
 }
 
+.wrapper-inner {
+  padding: 0 2.5rem;
+}
+
 .header {
-  font-family: Lato, Helvetica, Arial, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 6px #323746 solid;
+  background-color: #2d303a;
   font-weight: 700;
 }
 
-.logo {
+.logo__text {
   color: #ffffff;
   font-size: 1.5625rem;
+  text-transform: uppercase;
+  margin: 1em 0;
+  letter-spacing: -0.4px;
+  position: relative;
+}
+.logo__text::after {
+  content: "*";
+  position: absolute;
+  color: #f06c64;
 }
 
+.nav-menu__list {
+  display: flex;
+}
+.nav-menu__list > li + li {
+  margin-left: 1.75em;
+}
+.nav-menu__list > li + li::after {
+  content: ".";
+  position: absolute;
+  top: -0.4em;
+  left: -1em;
+  color: #494e62;
+}
+.nav-menu__item {
+  position: relative;
+}
 .nav-menu__link {
+  display: block;
   color: #ffffff;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+.nav-menu__link--active {
+  color: #f06c64;
+}
+
+.title {
+  text-transform: capitalize;
+  font-weight: 900;
+  color: #666d89;
+}
+.title--size_big {
+  font-size: 1.875rem;
+}
+.title--size_small {
+  font-size: 1.125rem;
+}
+
+.subtitle {
+  color: #767e9e;
+}
+.subtitle--size_big {
+  font-size: 1.125rem;
+  font-weight: 300;
+}
+.subtitle--size_small {
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.media:nth-child(odd) {
+  clear: left;
+}
+.media__icon {
+  padding: 0.875em;
+  margin-right: 1.4285em;
+  border: 2px solid #666d89;
+  border-radius: 50%;
+  float: left;
+}
+.media__title {
+  margin-bottom: 0.833em;
 }

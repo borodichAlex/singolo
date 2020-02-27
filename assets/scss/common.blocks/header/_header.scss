@@ -1,4 +1,12 @@
 .header {
-	font-family: Lato, Helvetica, Arial, sans-serif;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+
+	border-bottom: 6px #323746 solid;
+	background-color: #2d303a;
+
 	font-weight: 700;
+
 }

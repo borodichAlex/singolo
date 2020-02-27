@@ -1,7 +1,34 @@
 .nav-menu {
 
+	&__list {
+		display: flex;
+
+		& > li + li {
+			margin-left: 1.75em;
+
+			&::after {
+				content: '.';
+				position: absolute;
+				top: -0.4em;
+				left: -1em;
+				color: #494e62;
+			}
+		}
+	}
+
+	&__item {
+		position: relative;
+	}
+
 	&__link {
+		display: block;
 		color: $color-header-text;
+		font-size: .75rem;
+		text-transform: uppercase;
+
+		&--active {
+			color: #f06c64;
+		}
 	}
 
 

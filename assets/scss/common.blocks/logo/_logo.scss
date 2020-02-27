@@ -1,4 +1,19 @@
 .logo {
-	color: $color-header-text;
-	font-size: 1.5625rem;
+
+	&__text {
+		color: $color-header-text;
+		font-size: 1.5625rem;
+		text-transform: uppercase;
+		margin: 1em 0;
+		letter-spacing: -0.4px;
+
+		position: relative;
+
+		&::after {
+			content: '*';
+			position: absolute;
+			color: #f06c64;
+		}
+	}
+	
 }
