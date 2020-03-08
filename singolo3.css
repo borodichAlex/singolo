@@ -115,6 +115,7 @@ body {
 .subtitle {
   color: #767e9e;
   text-align: justify;
+  word-wrap: break-word;
 }
 .subtitle--size_big {
   font-size: 1.125rem;
@@ -232,11 +233,43 @@ body {
   margin-bottom: 7px;
 }
 .quote__contact-info > p {
-  margin-bottom: 33px;
+  margin-bottom: 17px;
   padding-left: 8px;
-  line-height: 21px;
+  line-height: 21.5px;
 }
 .quote__contacts {
   display: flex;
   flex-direction: column;
+}
+.quote__contact {
+  padding-left: 32px;
+  line-height: 1.4;
+}
+.quote__contact > a {
+  color: #f0d8d9;
+  font-size: 12px;
+  position: relative;
+  cursor: pointer;
+}
+.quote__contact > a::before {
+  position: absolute;
+  content: "";
+  background-repeat: no-repeat;
+  width: 1.25em;
+  height: 1.25em;
+}
+.quote__location::before {
+  background-image: url(assets/images/contacts/contacts-icon-location.png);
+  top: 2px;
+  left: -20px;
+}
+.quote__phone::before {
+  background-image: url(assets/images/contacts/contacts-icon-phone.png);
+  top: 2px;
+  left: -22px;
+}
+.quote__mail::before {
+  background-image: url(assets/images/contacts/contacts-icon-mail.png);
+  top: 4px;
+  left: -22px;
 }
