@@ -1,0 +1,31 @@
+.socials {
+
+	display: flex;
+
+	&__item:not(:last-child) {
+		margin-right: 8px;
+	}
+
+	&__link {
+		display: inline-block;
+		border: 1px solid #666d89;
+		padding: 15px;
+		border-radius: 50%;
+		position: relative;
+
+		& > img {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		&:hover {
+			cursor: pointer;
+			background-color: #7f87a7;
+		}
+	}
+}
+.iconasdf {
+	fill: blueviolet;
+}

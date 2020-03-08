@@ -1,0 +1,33 @@
+.cards {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(1, 1fr);
+	column-gap: 18px;
+	justify-items: center;
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		max-width: 300px;
+	}
+
+	&__title {
+		margin-top: 13px;
+		margin-bottom: 5px;
+		font-weight: 700;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+	}
+
+	&__subtitle {
+		line-height: 21.56px;
+		margin-bottom: 24px;
+
+		&::first-line {
+			letter-spacing: 0.1px;
+		}
+	}
+
+
+}
