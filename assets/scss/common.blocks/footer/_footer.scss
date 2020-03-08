@@ -1,0 +1,18 @@
+.footer {
+
+	background-color: #2d303a;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&__address {
+		font-size: 12px;
+		font-weight: 400;
+		color: #666d89;
+		font-style: normal;
+
+		padding: 28px 0 31px;
+	}
+
+}
