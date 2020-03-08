@@ -1,6 +1,8 @@
 .subtitle {
 
 	color: $color-text;
+	text-align: justify;
+	word-wrap: break-word;
 
 	&--size_big {
 		font-size: 1.125rem;
@@ -10,5 +12,9 @@
 	&--size_small {
 		font-size: .75rem;
 		font-weight: 400;
+	}
+
+	&--theme_primary {
+		color: #f0d8d9;
 	}
 }
