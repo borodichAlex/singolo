@@ -10,9 +10,8 @@
 	}
 
 	&__subtitle {
-		word-spacing: 1.1px;
 		line-height: 28px;
-		margin-bottom: 2.3em;
+		margin-bottom: 2.4em;
 	}
 
 	&__grid {
@@ -20,7 +19,7 @@
 		grid-template-columns: repeat(3, 1fr);
 		grid-template-rows: repeat(2, 1fr);
 
-		gap: 30px 15px;
+		gap: 27px 20px;
 	}
 
 }

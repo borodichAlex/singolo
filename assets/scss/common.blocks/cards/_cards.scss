@@ -2,7 +2,8 @@
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(1, 1fr);
-	column-gap: 20px;
+	column-gap: 18px;
+	justify-items: center;
 
 	&__item {
 		display: flex;
@@ -21,7 +22,7 @@
 
 	&__subtitle {
 		line-height: 21.56px;
-		margin-bottom: 23px;
+		margin-bottom: 24px;
 
 		&::first-line {
 			letter-spacing: 0.1px;
