@@ -132,15 +132,17 @@ body {
 .socials {
   display: flex;
 }
+.socials__item:not(:last-child) {
+  margin-right: 8px;
+}
 .socials__link {
   display: inline-block;
   border: 1px solid #666d89;
   padding: 15px;
   border-radius: 50%;
   position: relative;
-  margin-right: 8px;
 }
-.socials__link > svg {
+.socials__link > img {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -149,6 +151,10 @@ body {
 .socials__link:hover {
   cursor: pointer;
   background-color: #7f87a7;
+}
+
+.iconasdf {
+  fill: blueviolet;
 }
 
 .quote {
@@ -272,4 +278,18 @@ body {
   background-image: url(assets/images/contacts/contacts-icon-mail.png);
   top: 4px;
   left: -22px;
+}
+
+.footer {
+  background-color: #2d303a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__address {
+  font-size: 12px;
+  font-weight: 400;
+  color: #666d89;
+  font-style: normal;
+  padding: 28px 0 31px;
 }
