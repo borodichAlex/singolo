@@ -1,5 +1,17 @@
 .logo {
 
+	order: 1;
+
+	&.is-open {
+		z-index: 30;
+		margin-right: 50%;
+	}
+
+
+	@media screen and (min-width: 48em) {
+		order: -1;
+	}
+
 	&__text {
 		color: $color-header-text;
 		text-transform: uppercase;
@@ -9,7 +21,7 @@
 		
 		position: relative;
 
-		@media screen and (min-width: 23.44em) {
+		@media screen and (min-width: 48em) {
 			font-size: 1.5625rem;
 		}
 		

@@ -12,3 +12,7 @@ body {
 		padding: 0 2.5rem;
 	}
 }
+
+body.is-open-menu {
+	overflow: hidden;
+}

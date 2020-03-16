@@ -10,17 +10,24 @@
 
 <body>
 	<header id="header" class="header wrapper-inner">
-		<div class="logo">
+		<div id="logo" class="logo">
 			<h1 class="logo__text">singolo</h1>
 		</div>
-		<nav id="nav-menu" class="nav-menu">
-			<ul class="nav-menu__list">
-				<li class="nav-menu__item"><a href="#header" class="nav-menu__link nav-menu__link--active link">home</a></li>
-				<li class="nav-menu__item"><a href="#services" class="nav-menu__link link">services</a></li>
-				<li class="nav-menu__item"><a href="#portfolio" class="nav-menu__link link">portfolio</a></li>
-				<li class="nav-menu__item"><a href="#about" class="nav-menu__link link">about</a></li>
-				<li class="nav-menu__item"><a href="#contacts" class="nav-menu__link link">contact</a></li>
-			</ul>
+		<nav class="nav-menu">
+			<button class="nav-menu__toggle" id="toggle-menu"></button>
+			<div class="nav-menu__dropdown">
+				<div class="nav-menu__backdrop"></div>
+				<div class="nav-menu__body">
+					<ul id="nav-menu" class="nav-menu__list">
+						<li class="nav-menu__item"><a href="#header" class="nav-menu__link nav-menu__link--active link">home</a>
+						</li>
+						<li class="nav-menu__item"><a href="#services" class="nav-menu__link link">services</a></li>
+						<li class="nav-menu__item"><a href="#portfolio" class="nav-menu__link link">portfolio</a></li>
+						<li class="nav-menu__item"><a href="#about" class="nav-menu__link link">about</a></li>
+						<li class="nav-menu__item"><a href="#contacts" class="nav-menu__link link">contact</a></li>
+					</ul>
+				</div>
+			</div>
 		</nav>
 	</header>
 
