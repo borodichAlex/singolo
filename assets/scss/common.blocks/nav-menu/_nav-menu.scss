@@ -2,29 +2,44 @@
 
 	&__list {
 		display: flex;
+		flex-direction: column;
+
+		@media screen and (min-width: 23.44em) {
+			flex-direction: row;
+		}
 
 		& > li + li {
-			margin-left: 1.77em;
+			margin-top: 2.25em;
+			@media screen and (min-width: 23.44em) {
+				margin-left: 1.77em;
+				margin-top: 0;
 
-			&::after {
+				&::after {
 				content: '.';
 				position: absolute;
 				top: -0.4em;
 				left: -1em;
 				color: #494e62;
+				}
+
 			}
+			
 		}
 	}
 
 	&__item {
 		position: relative;
 	}
-
+	
 	&__link {
 		display: block;
 		color: $color-header-text;
-		font-size: .75rem;
 		text-transform: uppercase;
+		font-size: 2rem;
+		
+		@media screen and (min-width: 23.44em) {
+			font-size: .75rem;
+		}
 
 		&--active {
 			color: #f06c64;
