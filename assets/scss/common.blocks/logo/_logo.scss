@@ -2,13 +2,17 @@
 
 	&__text {
 		color: $color-header-text;
-		font-size: 1.5625rem;
 		text-transform: uppercase;
+		font-size: 1.25rem;
 		margin: 1em 0 1.08em;
 		letter-spacing: -0.4px;
-
+		
 		position: relative;
 
+		@media screen and (min-width: 23.44em) {
+			font-size: 1.5625rem;
+		}
+		
 		&::after {
 			content: '*';
 			position: absolute;
