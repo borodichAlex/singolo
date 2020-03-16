@@ -9,18 +9,25 @@
 </head>
 
 <body>
-	<header class="header wrapper-inner">
-		<div class="logo">
+	<header id="header" class="header wrapper-inner">
+		<div id="logo" class="logo">
 			<h1 class="logo__text">singolo</h1>
 		</div>
 		<nav class="nav-menu">
-			<ul class="nav-menu__list">
-				<li class="nav-menu__item"><a href="#" class="nav-menu__link nav-menu__link--active link">home</a></li>
-				<li class="nav-menu__item"><a href="#" class="nav-menu__link link">services</a></li>
-				<li class="nav-menu__item"><a href="#" class="nav-menu__link link">portfolio</a></li>
-				<li class="nav-menu__item"><a href="#" class="nav-menu__link link">about</a></li>
-				<li class="nav-menu__item"><a href="#" class="nav-menu__link link">contact</a></li>
-			</ul>
+			<button class="nav-menu__toggle" id="toggle-menu"></button>
+			<div class="nav-menu__dropdown">
+				<div class="nav-menu__backdrop"></div>
+				<div class="nav-menu__body">
+					<ul id="nav-menu" class="nav-menu__list">
+						<li class="nav-menu__item"><a href="#header" class="nav-menu__link nav-menu__link--active link">home</a>
+						</li>
+						<li class="nav-menu__item"><a href="#services" class="nav-menu__link link">services</a></li>
+						<li class="nav-menu__item"><a href="#portfolio" class="nav-menu__link link">portfolio</a></li>
+						<li class="nav-menu__item"><a href="#about" class="nav-menu__link link">about</a></li>
+						<li class="nav-menu__item"><a href="#contacts" class="nav-menu__link link">contact</a></li>
+					</ul>
+				</div>
+			</div>
 		</nav>
 	</header>
 
@@ -29,33 +36,51 @@
 		<span class="slider__arrow slider__arrow--left">
 			<img src="./assets/images/slider/slider-icon-arrow-left.png" alt="arrow-left">
 		</span>
+		<div class="slider__body">
 
-		<div class="slider__slide">
+			<div class="slider__slide slider__slide--current">
 
-			<div class="telephone">
-				<div class="telephone__body">
-					<img class="telephone__bg" src="./assets/images/slider/slider-img-telephone.png" alt="telephone-bg">
-					<img class="telephone__screen" src="./assets/images/slider/slider-img-screen1.jpg" alt="telephone--vertical">
+				<div class="telephone">
+					<div class="telephone__body">
+						<img class="telephone__bg" srcset="./assets/images/slider/slider-img-telephone.png" alt="telephone-bg">
+						<img class="telephone__screen" src="./assets/images/slider/slider-img-screen1.jpg"
+							alt="telephone--vertical">
+						<button class="telephone__button"></button>
+					</div>
 				</div>
+
+				<div class="telephone">
+					<div class="telephone__body telephone__body--horizontal">
+						<img class="telephone__bg" src="./assets/images/slider/slider-img-telephone.png" alt="telephone-bg">
+						<img class="telephone__screen telephone__screen--horizontal"
+							src="./assets/images/slider/slider-img-screen2.jpg" alt="telephone--horizontal">
+						<button class="telephone__button"></button>
+					</div>
+				</div>
+
 			</div>
 
-			<div class="telephone">
-				<div class="telephone__body telephone__body--horizontal">
-					<img class="telephone__bg" src="./assets/images/slider/slider-img-telephone.png" alt="telephone-bg">
-					<img class="telephone__screen telephone__screen--horizontal"
-						src="./assets/images/slider/slider-img-screen2.jpg" alt="telephone--horizontal">
+			<div class="slider__slide ">
+
+				<div class="telephone">
+					<div class="telephone__body">
+						<img class="telephone__bg" src="./assets/images/slider/slider-img-telephone.png" alt="telephone-bg">
+						<img class="telephone__screen" src="./assets/images/slider/slider-img-screen3.png"
+							alt="telephone--vertical">
+						<button class="telephone__button"></button>
+					</div>
 				</div>
+
 			</div>
 
 		</div>
-
 		<span class="slider__arrow slider__arrow--right">
 			<img src="./assets/images/slider/slider-icon-arrow-left.png" alt="arrow-right">
 		</span>
 
 	</section>
 
-	<section class="services wrapper-inner">
+	<section id="services" class="services wrapper-inner">
 		<article class="services__lead">
 			<h2 class="services__title title title--size_big">our services</h2>
 			<p class="services__subtitle subtitle subtitle--size_big">Fusce dapibus, tellus ac cursus commodo, tortor mauris
@@ -171,7 +196,7 @@
 		</section>
 	</section>
 
-	<section class="portfolio wrapper-inner">
+	<section id="portfolio" class="portfolio wrapper-inner">
 
 		<article class="portfolio__lead">
 			<h2 class="portfolio__title title title--size_big">portfolio</h2>
@@ -219,7 +244,7 @@
 
 	</section>
 
-	<section class="about wrapper-inner">
+	<section id="about" class="about wrapper-inner">
 
 		<article class="about__lead">
 			<h2 class="about__title title title--size_big">about us</h2>
@@ -293,7 +318,7 @@
 
 	</section>
 
-	<section class="quote wrapper-inner">
+	<section id="contacts" class="quote wrapper-inner">
 
 		<article class="quote__lead">
 			<h2 class="title title--size_big title--theme_primary">Get a Quote</h2>
@@ -311,7 +336,7 @@
 				<input type="text" name="subject" placeholder="Subject">
 				<textarea name="describe-project" cols="30" rows="10"
 					placeholder="Describe your project in detail..."></textarea>
-				<input type="submit" name="submit" value="Submit">
+				<input type="submit" name="submit" value="SEND">
 			</form>
 
 			<aside class="quote__contact-info">
@@ -355,6 +380,8 @@
 				</a></li>
 		</ul>
 	</footer>
+
+	<script src="./script.js"></script>
 </body>
 
 </html>

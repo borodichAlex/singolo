@@ -7,5 +7,12 @@ body {
 }
 
 .wrapper-inner {
-	padding: 0 2.5rem;
+	padding: 0 1.875rem;
+	@media screen and (min-width: 48em) {
+		padding: 0 2.5rem;
+	}
+}
+
+body.is-open-menu {
+	overflow: hidden;
 }

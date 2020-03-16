@@ -1,8 +1,12 @@
 .header {
-
+	
 	display: flex;
-	justify-content: space-between;
 	align-items: baseline;
+	justify-content: center;
+
+	@media screen and (min-width: 48em) {
+		justify-content: space-between;
+	}
 
 	border-bottom: 6px #323746 solid;
 	background-color: #2d303a;
