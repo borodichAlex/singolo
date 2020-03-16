@@ -185,7 +185,7 @@ body.is-open-menu {
   position: absolute;
   z-index: 30;
   display: block;
-  background-image: url("/assets/images/icon-humburger.svg");
+  background-image: url("./assets/images/icon-humburger.svg");
   background-repeat: no-repeat;
   transform: rotate(90deg);
   width: 1em;
@@ -364,7 +364,7 @@ body.is-open-menu {
 .slider--bg_primary {
   background-color: #648BF0;
   border-bottom: 6px solid #4476f7;
-  background-image: url("/assets/images/slider/slider-bg.png");
+  background-image: url("./assets/images/slider/slider-bg.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
