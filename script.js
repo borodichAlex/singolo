@@ -3,16 +3,44 @@ let navMenu = document.querySelector('.nav-menu__list');
 let logo = document.querySelector('#logo');
 let toggleMenu = document.querySelector('#toggle-menu');
 
+let itemsNavMenu = [...document.querySelectorAll('.nav-menu__link')];
+let blocksNavMenu = itemsNavMenu.map(link => {
+	let block = link.attributes.href.textContent;
+	return document.querySelector(block);
+})
+
+let addLinkActive = (link) => {
+	document.querySelector('.nav-menu__list .nav-menu__link--active').classList.remove('nav-menu__link--active');
+	itemsNavMenu[link].classList.add('nav-menu__link--active');
+}
+
+document.onscroll = function showHeader() {
+	let heightBlocks = blocksNavMenu.map(block => block.offsetTop)
+	let header = document.querySelector('#header');
+	let top = header.offsetTop + header.offsetHeight;
+
+	(globalThis.pageYOffset > header.clientHeight) ? header.classList.add('header--fixed') : header.classList.remove('header--fixed');
+
+	if (top < heightBlocks[1]) addLinkActive(0);
+	if (top >= heightBlocks[1] && top < heightBlocks[2]) addLinkActive(1)
+	if (top >= heightBlocks[2] && top < heightBlocks[3]) addLinkActive(2)
+	if (top >= heightBlocks[3] && top < heightBlocks[4]) addLinkActive(3)
+	if (top >= heightBlocks[4]) addLinkActive(4)
+}
+
 navMenu.addEventListener("click", (event) => {
-	let prevLink = document.querySelector('.nav-menu__list .nav-menu__link--active');
-	let activeLink = event.target;
+	event.preventDefault();
+	let prevLink = itemsNavMenu.findIndex(link => link.attributes.href.textContent === event.target.attributes.href.textContent);
 
-	prevLink.classList.remove('nav-menu__link--active');
-	activeLink.classList.add('nav-menu__link--active');
+	addLinkActive(prevLink)
 
-	if (logo.classList.contains('is-open')) {
-		toggleMenu.click();
+	if (prevLink !== 0) {
+		document.querySelector('html').scrollTop = blocksNavMenu[prevLink].offsetTop - blocksNavMenu[0].offsetHeight;
+	} else {
+		document.querySelector('html').scrollTop = 0;
 	}
+
+	if (logo.classList.contains('is-open')) toggleMenu.click();
 }, false);
 
 
