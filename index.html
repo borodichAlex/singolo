@@ -334,7 +334,7 @@
 				<input type="text" name="user-name" placeholder="Name (Required)" required>
 				<input type="email" name="email" placeholder="Email (Required)" required>
 				<input type="text" name="subject" placeholder="Subject">
-				<textarea name="describe-project" cols="30" rows="10"
+				<textarea name="describe-project" cols="30" rows="10" maxlength="550"
 					placeholder="Describe your project in detail..."></textarea>
 				<input type="submit" name="submit" value="SEND">
 			</form>
@@ -381,6 +381,16 @@
 		</ul>
 	</footer>
 
+	<div id="modal" class="modal">
+		<div class="modal__backdrop"></div>
+		<div class="modal__body">
+			<h3 class="modal__heading title--size_big">The letter was sent</h3>
+			<p class="modal__subject title--size_small"></p>
+			<p class="modal__description title--size_small"></p>
+			<button class="modal__close">OK</button>
+		</div>
+
+	</div>
 	<script src="./script.js"></script>
 </body>
 

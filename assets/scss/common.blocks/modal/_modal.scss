@@ -1,0 +1,55 @@
+.modal {
+	display: none;
+	
+	&__backdrop {
+		z-index: 100;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: rgba(0,0,0, .7);
+	}
+	
+	&__body {
+		z-index: 110;
+		position: fixed;
+		top: 15%;
+		bottom: 15%;
+		left: 20%;
+		right: 20%;
+		overflow: auto;
+		background-color: #f06b64e0;
+		border-radius: 1em;
+		padding: 3em;
+		color: $color-header-text;
+
+		> * + * {
+			margin-top: 1em;
+		}
+	}
+
+	&__description {
+		max-width: 100%;
+		overflow: hidden;
+		max-height: 60%;
+	}
+
+	&__close {
+		cursor: pointer;
+		border: 0;
+		font-size: .875rem;
+		cursor: pointer;
+		color: #886A30;
+		background-color: #FBC65F;
+		border-radius: 5px;
+		font-weight: bold;
+		padding: .5em 2em;
+
+		&:hover {
+			background-color:rgb(219, 148, 6);
+			color: rgb(206, 202, 194);
+		}
+	}
+
+}
