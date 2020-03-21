@@ -41,8 +41,10 @@
 			padding-top: 54px;
 			padding-bottom: 83px;
 		}
+		transition: order 2s ease-out;
 	}
 
+	
 	&__slide {
 		flex-grow: 1 0;
 		min-width: 100%;
@@ -51,16 +53,28 @@
 		display: flex;
 		padding-left: 0px;
 
+		
 		@media screen and (min-width: 48em) {
 			padding-left: 20px;
 		}
-	
+		
 		@media screen and (min-width: 63.75em) {
 			padding-left: 50px;
 		}
-
+		
 		&--current {
 			order: -1;
+			animation-name: slide-move;
+			animation-duration: 1s;
+		}
+	}
+	
+	@keyframes slide-move {
+		0% {
+			transform: translateX(0);
+		}
+		100% {
+			transform: translateX(100%);
 		}
 	}
 

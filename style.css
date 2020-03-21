@@ -398,6 +398,7 @@ body.is-open-menu {
   display: flex;
   max-width: 90%;
   overflow: hidden;
+  transition: order 2s ease-out;
 }
 @media screen and (min-width: 48em) {
   .slider__body {
@@ -430,6 +431,16 @@ body.is-open-menu {
 }
 .slider__slide--current {
   order: -1;
+  animation-name: slide-move;
+  animation-duration: 1s;
+}
+@keyframes slide-move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
 .slider__arrow {
   position: absolute;

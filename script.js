@@ -56,31 +56,39 @@ toggleMenu.addEventListener('click', (event) => {
 })
 
 // slider
+
 let slider = document.querySelector('.slider');
 let slides = [...document.querySelectorAll('.slider__slide')];
 let arrowRight = document.querySelector('.slider__arrow--right');
 let arrowLeft = document.querySelector('.slider__arrow--left');
 
+let addSlideActive = (prevSlide, curSlide) => {
+	slides[prevSlide].classList.remove('slider__slide--current')
+	slides[curSlide].classList.add('slider__slide--current');
+}
+
 arrowRight.addEventListener("click", (event) => {
 	slider.classList.toggle('slider--bg_primary');
-	if (slides[slides.length - 1].classList.contains('slider__slide--current')) {
-		slides[slides.length - 1].classList.remove('slider__slide--current');
-		slides[0].classList.add('slider__slide--current');
-	} else if (slides[0].classList.contains('slider__slide--current')) {
-		slides[0].classList.remove('slider__slide--current');
-		slides[1].classList.add('slider__slide--current');
+
+	let prevSlide = slides.findIndex(slide => slide.classList.contains('slider__slide--current'))
+
+	if (prevSlide >= slides.length - 1) {
+		addSlideActive(prevSlide, 0)
+	} else {
+		addSlideActive(prevSlide, prevSlide + 1)
 	}
 
 }, false);
 
 arrowLeft.addEventListener("click", (event) => {
 	slider.classList.toggle('slider--bg_primary');
-	if (slides[slides.length - 1].classList.contains('slider__slide--current')) {
-		slides[slides.length - 1].classList.remove('slider__slide--current');
-		slides[0].classList.add('slider__slide--current');
-	} else if (slides[0].classList.contains('slider__slide--current')) {
-		slides[0].classList.remove('slider__slide--current');
-		slides[1].classList.add('slider__slide--current');
+
+	let prevSlide = slides.findIndex(slide => slide.classList.contains('slider__slide--current'))
+
+	if (prevSlide <= 0) {
+		addSlideActive(prevSlide, slides.length - 1)
+	} else {
+		addSlideActive(prevSlide, prevSlide - 1)
 	}
 
 }, false);
