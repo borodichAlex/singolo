@@ -373,73 +373,55 @@ body.is-open-menu {
 }
 
 .slider {
-  background-color: #f06c64;
-  border-bottom: 6px solid #ea676b;
-  display: flex;
-  justify-content: center;
   position: relative;
-  padding: 0;
-}
-.slider--bg_primary {
-  background-color: #648BF0;
-  border-bottom: 6px solid #4476f7;
-  background-image: url("./assets/images/slider/slider-bg.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-.slider--bg_primary .slider__slide {
-  justify-content: center;
-  padding-left: 0;
-  padding-right: 15px;
+  overflow: hidden;
 }
 .slider__body {
-  padding-top: 0px;
-  padding-bottom: 0px;
   display: flex;
-  max-width: 90%;
-  overflow: hidden;
-  transition: order 2s ease-out;
+}
+.slider__slide {
+  background-color: #f06c64;
+  border-bottom: 6px solid #ea676b;
+  flex: 0 0 100%;
+  max-width: 100%;
+  order: 0;
+  display: flex;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 @media screen and (min-width: 48em) {
-  .slider__body {
+  .slider__slide {
     padding-top: 41px;
     padding-bottom: 65px;
   }
 }
 @media screen and (min-width: 63.75em) {
-  .slider__body {
+  .slider__slide {
     padding-top: 54px;
     padding-bottom: 83px;
   }
 }
-.slider__slide {
-  flex-grow: 1 0;
-  min-width: 100%;
-  order: 0;
-  display: flex;
-  padding-left: 0px;
-}
-@media screen and (min-width: 48em) {
-  .slider__slide {
-    padding-left: 20px;
-  }
-}
-@media screen and (min-width: 63.75em) {
-  .slider__slide {
-    padding-left: 50px;
-  }
+.slider__slide--bg_primary {
+  background-color: #648BF0;
+  border-bottom: 6px solid #4476f7;
+  background-image: url("./assets/images/slider/slider-bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  justify-content: center;
 }
 .slider__slide--current {
   order: -1;
-  animation-name: slide-move;
-  animation-duration: 1s;
 }
-@keyframes slide-move {
+.slider__slide--current .telephone {
+  animation-name: slide-move-right;
+  animation-duration: 2s;
+}
+@keyframes slide-move-right {
   0% {
-    transform: translateX(0);
+    transform: translateX(100%);
   }
   100% {
-    transform: translateX(100%);
+    transform: translateX(0);
   }
 }
 .slider__arrow {

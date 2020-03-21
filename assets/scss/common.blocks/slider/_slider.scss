@@ -1,80 +1,63 @@
 .slider {
-	background-color: #f06c64;
-	border-bottom: 6px solid #ea676b;
-	
-	display: flex;
-	justify-content: center;
 	
 	position: relative;
-
-	padding: 0;
-
-	&--bg_primary {
-		background-color: #648BF0;
-		border-bottom: 6px solid rgb(68, 118, 247);
-
-		background-image: url('./assets/images/slider/slider-bg.png');
-		background-repeat: no-repeat;
-		background-size: contain;
-	}
-
-	&--bg_primary &__slide {
-		justify-content: center;
-		padding-left: 0;
-		padding-right: 15px;
-	}
-
+	overflow: hidden;
+	
 	&__body {
-		padding-top: 0px;
-		padding-bottom: 0px;
-
 		display: flex;
-		max-width: 90%;
-		overflow: hidden;
+	}
+	
+	&__slide {
+		background-color: #f06c64;
+		border-bottom: 6px solid #ea676b;
+		
+		flex: 0 0 100%;
+		max-width: 100%;
+		order: 0;
+		
+		display: flex;
+		padding-left: 10%;
+		padding-right: 10%;
 
+		
 		@media screen and (min-width: 48em) {
 			padding-top: 41px;
 			padding-bottom: 65px;
 		}
-	
+		
 		@media screen and (min-width: 63.75em) {
 			padding-top: 54px;
 			padding-bottom: 83px;
 		}
-		transition: order 2s ease-out;
-	}
-
-	
-	&__slide {
-		flex-grow: 1 0;
-		min-width: 100%;
-		order: 0;
 		
-		display: flex;
-		padding-left: 0px;
-
-		
-		@media screen and (min-width: 48em) {
-			padding-left: 20px;
-		}
-		
-		@media screen and (min-width: 63.75em) {
-			padding-left: 50px;
+		&--bg_primary {
+			background-color: #648BF0;
+			border-bottom: 6px solid rgb(68, 118, 247);
+			
+			background-image: url('./assets/images/slider/slider-bg.png');
+			background-repeat: no-repeat;
+			background-size: contain;
+			
+			justify-content: center;
 		}
 		
 		&--current {
 			order: -1;
-			animation-name: slide-move;
-			animation-duration: 1s;
+			
+			& .telephone {
+				animation-name: slide-move-right;
+				animation-duration: 2s;
+			}
 		}
+		
 	}
-	
-	@keyframes slide-move {
+
+	@keyframes slide-move-right {
 		0% {
-			transform: translateX(0);
+			transform: translateX(100%);
 		}
 		100% {
-			transform: translateX(100%);
+			transform: translateX(0);
 		}
 	}
 

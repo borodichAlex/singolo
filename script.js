@@ -61,6 +61,7 @@ let slider = document.querySelector('.slider');
 let slides = [...document.querySelectorAll('.slider__slide')];
 let arrowRight = document.querySelector('.slider__arrow--right');
 let arrowLeft = document.querySelector('.slider__arrow--left');
+let bodySlider = document.querySelector('.slider__body');
 
 let addSlideActive = (prevSlide, curSlide) => {
 	slides[prevSlide].classList.remove('slider__slide--current')
@@ -68,21 +69,17 @@ let addSlideActive = (prevSlide, curSlide) => {
 }
 
 arrowRight.addEventListener("click", (event) => {
-	slider.classList.toggle('slider--bg_primary');
-
 	let prevSlide = slides.findIndex(slide => slide.classList.contains('slider__slide--current'))
 
 	if (prevSlide >= slides.length - 1) {
-		addSlideActive(prevSlide, 0)
+		addSlideActive(prevSlide, 0);
 	} else {
-		addSlideActive(prevSlide, prevSlide + 1)
+		addSlideActive(prevSlide, prevSlide + 1);
 	}
 
 }, false);
 
 arrowLeft.addEventListener("click", (event) => {
-	slider.classList.toggle('slider--bg_primary');
-
 	let prevSlide = slides.findIndex(slide => slide.classList.contains('slider__slide--current'))
 
 	if (prevSlide <= 0) {
