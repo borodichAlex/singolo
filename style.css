@@ -451,23 +451,14 @@ body.is-open-menu {
 
 .telephone {
   line-height: 0;
-  transform: scale(0.5, 0.5);
-}
-@media screen and (min-width: 48em) {
-  .telephone {
-    transform: scale(0.8, 0.8);
-  }
-}
-@media screen and (min-width: 63.75em) {
-  .telephone {
-    transform: scale(1, 1);
-  }
 }
 .telephone__button {
   position: absolute;
   border: 0;
   margin: 0;
   padding: 0;
+  bottom: 60px;
+  left: 85px;
 }
 .telephone__button::after {
   content: "";
@@ -478,8 +469,8 @@ body.is-open-menu {
   height: 45px;
   border-radius: 50%;
   position: absolute;
-  bottom: 10px;
-  left: 86px;
+  top: 10px;
+  left: 0px;
 }
 .telephone__body {
   position: relative;
