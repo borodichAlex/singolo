@@ -628,6 +628,10 @@ body.is-open-menu {
     height: 187px;
   }
 }
+.projects__img--active {
+  cursor: pointer;
+  border: 5px solid #f06c64;
+}
 .projects__grid {
   margin-top: 19px;
   overflow: hidden;
