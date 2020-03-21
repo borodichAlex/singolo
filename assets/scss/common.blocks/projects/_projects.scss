@@ -1,22 +1,28 @@
 .projects {
 	
 	margin-bottom: 43px;
-
+	
 	&__img {
-
+		
 		object-fit: contain;
 		max-width: 151px;
 		max-height: 128px;
-
+		
 		@media screen and (min-width: 48em) {
 			max-width: 217px;
 			max-height: 184px;
 		}
-
+		
 		@media screen and (min-width: 63.75em) {
 			max-width: 220px;
 			height: 187px;
 		}
+
+		&--active {
+			cursor: pointer;
+			border: 5px solid #f06c64;
+		}
+
 	}
 	
 

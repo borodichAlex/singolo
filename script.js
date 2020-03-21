@@ -157,3 +157,21 @@ modalBackdrop.addEventListener('click', (event) => {
 })
 
 
+//portfolio
+
+let images = [...document.querySelectorAll('.projects__img')]
+let gridImg = document.querySelector('.projects__grid');
+
+gridImg.addEventListener('click', event => {
+	event.preventDefault();
+
+	if (event.target.classList.contains('projects__img')) {
+		let activeImg = event.target;
+		let prevImg = images.findIndex(img => img.classList.contains('projects__img--active'));
+		activeImg.classList.toggle('projects__img--active');
+		if (prevImg !== -1) {
+			images[prevImg].classList.remove('projects__img--active');
+		}
+	}
+
+})
