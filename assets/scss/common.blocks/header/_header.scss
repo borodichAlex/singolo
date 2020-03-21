@@ -1,16 +1,38 @@
 .header {
-	
 	display: flex;
 	align-items: baseline;
 	justify-content: center;
+	
+	border-bottom: 6px #323746 solid;
+	background-color: #2d303a;
+
+	padding: 1.5em 2.5rem;
+
+	font-weight: 700;
 
 	@media screen and (min-width: 48em) {
 		justify-content: space-between;
 	}
 
-	border-bottom: 6px #323746 solid;
-	background-color: #2d303a;
+	&--fixed {
+		position: sticky;
+		z-index: 100;
+		min-width: 100%;
+		top: 0;
+		left: 0;
+		animation-name: show_header;
+		animation-duration: .5s;
+	}
 
-	font-weight: 700;
+	@keyframes show_header {
+		0% {
+			top: -80px;
+			opacity: 0;
+		}
+		100% {
+			top: 0px;
+			opacity: 1;
+		}
+	}
 
 }
