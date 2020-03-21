@@ -103,4 +103,57 @@ button.forEach((btn) => {
 })
 
 
+//modal
+let submitForm = document.querySelector('.quote__form > input[type="submit"]');
+let form = document.querySelector('.quote__form');
+let modal = document.querySelector('#modal');
+let buttonModal = document.querySelector('.modal__close');
+let modalBackdrop = document.querySelector('.modal__backdrop');
+
+submitForm.addEventListener('click', (event) => {
+	event.preventDefault();
+
+	let userName = document.querySelector('.quote__form > input[name="user-name"]');
+	let email = document.querySelector('.quote__form > input[name="email"]');
+
+	if (userName.checkValidity() && email.checkValidity()) {
+		modal.style.display = 'block';
+		document.querySelector('body').classList.toggle('is-open-menu');
+
+		let subject = document.querySelector('.quote__form > input[name="subject"]');
+		let describe = document.querySelector('.quote__form > textarea[name="describe-project"]');
+
+
+		if (subject.value === '') {
+			document.querySelector('.modal__subject').textContent = 'No subject';
+		} else {
+			document.querySelector('.modal__subject').textContent = `Subject: ${subject.value}`;
+		}
+
+		if (describe.value === '') {
+			document.querySelector('.modal__description').textContent = 'No description';
+		} else {
+			document.querySelector('.modal__description').textContent = `Description: ${describe.value}`;
+		}
+	}
+
+})
+
+function closeModal() {
+	modal.style.display = 'none';
+	document.querySelector('body').classList.toggle('is-open-menu');
+
+	form.reset()
+}
+
+buttonModal.addEventListener('click', (event) => {
+	event.preventDefault();
+	closeModal()
+})
+
+modalBackdrop.addEventListener('click', (event) => {
+	event.preventDefault();
+	closeModal()
+})
+
 
