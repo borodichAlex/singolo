@@ -157,7 +157,7 @@ modalBackdrop.addEventListener('click', (event) => {
 })
 
 
-//portfolio
+//portfolio img
 
 let images = [...document.querySelectorAll('.projects__img')]
 let gridImg = document.querySelector('.projects__grid');
@@ -175,3 +175,36 @@ gridImg.addEventListener('click', event => {
 	}
 
 })
+
+//portfolio tabs
+let itemsFilter = [...document.querySelectorAll('.filters__link')];
+let filter = document.querySelector('.projects__filters');
+let itemsPortfolio = [...document.querySelectorAll('.projects__elem')]
+
+let filterElems = (link) => {
+	let filter = link.dataset.filter;
+	console.log(filter);
+
+	itemsPortfolio.forEach(item => {
+		if (item.dataset.filter !== filter && filter !== 'all') {
+			item.style.display = 'none';
+		} else {
+			item.style.display = 'block'
+		}
+	})
+
+}
+
+filter.addEventListener('click', event => {
+	event.preventDefault();
+
+	let activeLink = event.target;
+	let prevLink = document.querySelector('.filters__link--active');
+
+	prevLink.classList.remove('filters__link--active');
+	activeLink.classList.add('filters__link--active');
+
+	filterElems(activeLink.parentElement)
+
+})
+
