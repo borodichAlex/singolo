@@ -32,8 +32,6 @@ navMenu.addEventListener("click", (event) => {
 	event.preventDefault();
 	let prevLink = itemsNavMenu.findIndex(link => link.attributes.href.textContent === event.target.attributes.href.textContent);
 
-	addLinkActive(prevLink)
-
 	if (prevLink !== 0) {
 		document.querySelector('html').scrollTop = blocksNavMenu[prevLink].offsetTop - blocksNavMenu[0].offsetHeight;
 	} else {
