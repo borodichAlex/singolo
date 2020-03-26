@@ -39,19 +39,40 @@
 
 				<div class="telephone">
 					<div class="telephone__body">
-						<img class="telephone__bg" srcset="./assets/images/slider/slider-img-telephone-large.png"
-							alt="telephone-bg">
-						<img class="telephone__screen" src="./assets/images/slider/slider-img-screen1.jpg"
-							alt="telephone--vertical">
+						<picture class="telephone__bg">
+							<source srcset="./assets/images/slider/slider-img-telephone-large.png" media="(min-width: 1020px)">
+							<source srcset="./assets/images/slider/slider-img-telephone-middle.png" media="(min-width: 768px)">
+							<source srcset="./assets/images/slider/slider-img-telephone-small.png" media="(min-width: 315px)">
+							<img class="telephone__bg" srcset="./assets/images/slider/slider-img-telephone-small.png"
+								alt="telephone-bg">
+						</picture>
+						<picture class="telephone__screen">
+							<source srcset="./assets/images/slider/slider-img-screen1-large.jpg" media="(min-width: 1020px)">
+							<source srcset="./assets/images/slider/slider-img-screen1-middle.jpg" media="(min-width: 768px)">
+							<source srcset="./assets/images/slider/slider-img-screen1-small.jpg" media="(min-width: 315px)">
+							<img class="telephone__bg" srcset="./assets/images/slider/slider-img-screen1-small.png"
+								alt="telephone--vertical">
+						</picture>
 						<button class="telephone__button"></button>
 					</div>
 				</div>
 
-				<div class="telephone">
+				<div class="telephone telephone--horizontal">
 					<div class="telephone__body telephone__body--horizontal">
-						<img class="telephone__bg" src="./assets/images/slider/slider-img-telephone-large.png" alt="telephone-bg">
-						<img class="telephone__screen telephone__screen--horizontal"
-							src="./assets/images/slider/slider-img-screen2.jpg" alt="telephone--horizontal">
+						<picture class="telephone__bg">
+							<source srcset="./assets/images/slider/slider-img-telephone-large.png" media="(min-width: 1020px)">
+							<source srcset="./assets/images/slider/slider-img-telephone-middle.png" media="(min-width: 768px)">
+							<source srcset="./assets/images/slider/slider-img-telephone-small.png" media="(min-width: 315px)">
+							<img class="telephone__bg" srcset="./assets/images/slider/slider-img-telephone-small.png"
+								alt="telephone-bg">
+						</picture>
+						<picture class="telephone__screen telephone__screen--horizontal">
+							<source srcset="./assets/images/slider/slider-img-screen2-large.jpg" media="(min-width: 1020px)">
+							<source srcset="./assets/images/slider/slider-img-screen2-middle.jpg" media="(min-width: 768px)">
+							<source srcset="./assets/images/slider/slider-img-screen2-small.jpg" media="(min-width: 315px)">
+							<img class="telephone__bg" srcset="./assets/images/slider/slider-img-screen2-small.png"
+								alt="telephone--horizontal">
+						</picture>
 						<button class="telephone__button"></button>
 					</div>
 				</div>
@@ -62,9 +83,20 @@
 
 				<div class="telephone">
 					<div class="telephone__body">
-						<img class="telephone__bg" src="./assets/images/slider/slider-img-telephone.png" alt="telephone-bg">
-						<img class="telephone__screen" src="./assets/images/slider/slider-img-screen3.png"
-							alt="telephone--vertical">
+						<picture class="telephone__bg">
+							<source srcset="./assets/images/slider/slider-img-telephone-large.png" media="(min-width: 1020px)">
+							<source srcset="./assets/images/slider/slider-img-telephone-middle.png" media="(min-width: 768px)">
+							<source srcset="./assets/images/slider/slider-img-telephone-small.png" media="(min-width: 315px)">
+							<img class="telephone__bg" srcset="./assets/images/slider/slider-img-telephone-small.png"
+								alt="telephone-bg">
+						</picture>
+						<picture class="telephone__screen">
+							<source srcset="./assets/images/slider/slider-img-screen3-large.png" media="(min-width: 1020px)">
+							<source srcset="./assets/images/slider/slider-img-screen3-middle.png" media="(min-width: 768px)">
+							<source srcset="./assets/images/slider/slider-img-screen3-small.png" media="(min-width: 315px)">
+							<img class="telephone__bg" srcset="./assets/images/slider/slider-img-screen3-small.png"
+								alt="telephone--vertical">
+						</picture>
 						<button class="telephone__button"></button>
 					</div>
 				</div>
@@ -73,10 +105,10 @@
 
 		</div>
 		<span class="slider__arrow slider__arrow--left">
-			<img src="./assets/images/slider/slider-icon-arrow-left.png" alt="arrow-left">
+			<img src="./assets/images/slider/slider-icon-arrow-left.svg" alt="arrow-left">
 		</span>
 		<span class="slider__arrow slider__arrow--right">
-			<img src="./assets/images/slider/slider-icon-arrow-left.png" alt="arrow-right">
+			<img src="./assets/images/slider/slider-icon-arrow-left.svg" alt="arrow-right">
 		</span>
 
 	</section>
@@ -337,7 +369,7 @@
 				<input type="text" name="user-name" placeholder="Name (Required)" required>
 				<input type="email" name="email" placeholder="Email (Required)" required>
 				<input type="text" name="subject" placeholder="Subject">
-				<textarea name="describe-project" cols="30" rows="10" maxlength="550"
+				<textarea name="describe-project" cols="30" rows="8" maxlength="550"
 					placeholder="Describe your project in detail..."></textarea>
 				<input type="submit" name="submit" value="SEND">
 			</form>
@@ -367,7 +399,7 @@
 	</section>
 
 	<footer class="footer wrapper-inner">
-		<address class="footer__address">&#169; Copyright 2013 · by PSDchat.com</address>
+		<address class="footer__address">&#169; Copyright 2013</address>
 		<ul class="footer__socials socials">
 			<li class="socials__item"><a href="#" class="socials__link">
 					<img src="assets/images/socials/icon-facebook.png" alt="icon-facebook">

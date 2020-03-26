@@ -5,33 +5,43 @@
 	border-bottom: 6px solid #ffffff;
 
 	&__title {
-		margin-bottom: .5em;
+		margin-bottom: .3em;
 	}
 
 	&__subtitle {
-		line-height: 28px;
-		margin-bottom: 2.4em;
+		line-height: 30px;
+		margin-bottom: 1.4em;
+		margin-right: 5px;
 	}
 	
 	&__grid {
 		display: grid;
-		margin-bottom: 15px;
 	}
 
 	&__media {
-		margin-bottom: 15px;
+		margin-bottom: 23px;
 	}
 	
 	@media screen and (min-width: 48em) {
 		padding-top: 2.4375em;
+
+		&__title {
+			margin-bottom: .5em;
+			margin-right: 0px;
+		}
+
+		&__subtitle {
+			line-height: 28px;
+			margin-bottom: 1.8em;
+		}
 		
 		&__grid {
 			grid-template-columns: repeat(2, 1fr);
 			grid-template-rows: repeat(3, 1fr);
 			
-			gap: 53px 39px;
+			gap: 49px 21px;
 
-			margin-bottom: 53px;
+			margin-bottom: 69px;
 		}
 
 		&__media {
@@ -40,7 +50,11 @@
 	}
 
 	@media screen and (min-width: 63.75em) {
-		padding-top: 3.6875em;
+		padding-top: 3.45em;
+
+		&__subtitle {
+			margin-bottom: 2.4em;
+		}
 	
 		&__grid {
 			grid-template-columns: repeat(3, 1fr);
@@ -48,7 +62,7 @@
 	
 			gap: 27px 20px;
 
-			margin-bottom: 27px;
+			margin-bottom: 60px;
 		}
 	}
 

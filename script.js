@@ -17,7 +17,7 @@ let addLinkActive = (link) => {
 document.onscroll = function showHeader() {
 	let heightBlocks = blocksNavMenu.map(block => block.offsetTop)
 	let header = document.querySelector('#header');
-	let top = header.offsetTop + header.offsetHeight;
+	let top = header.offsetTop + header.offsetHeight + 10;
 
 	(globalThis.pageYOffset > header.clientHeight) ? header.classList.add('header--fixed') : header.classList.remove('header--fixed');
 
