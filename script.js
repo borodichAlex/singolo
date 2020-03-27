@@ -17,7 +17,7 @@ let addLinkActive = (link) => {
 document.onscroll = function showHeader() {
 	let heightBlocks = blocksNavMenu.map(block => block.offsetTop)
 	let header = document.querySelector('#header');
-	let top = header.offsetTop + header.offsetHeight;
+	let top = header.offsetTop + header.offsetHeight + 10;
 
 	(globalThis.pageYOffset > header.clientHeight) ? header.classList.add('header--fixed') : header.classList.remove('header--fixed');
 
@@ -31,8 +31,6 @@ document.onscroll = function showHeader() {
 navMenu.addEventListener("click", (event) => {
 	event.preventDefault();
 	let prevLink = itemsNavMenu.findIndex(link => link.attributes.href.textContent === event.target.attributes.href.textContent);
-
-	addLinkActive(prevLink)
 
 	if (prevLink !== 0) {
 		document.querySelector('html').scrollTop = blocksNavMenu[prevLink].offsetTop - blocksNavMenu[0].offsetHeight;

@@ -2,26 +2,28 @@
 	border-bottom: 6px solid #ffffff;
 	background-color: #f2f2f2;
 
-	padding-top: 1.56em;
-	padding-bottom: 61px;
+	padding-top: 1.75em;
+	padding-bottom: 32px;
 
 	@media screen and (min-width: 48em) {
-		padding-top: 2.4375em;
+		padding-top: 3em;
+		padding-bottom: 64px;
 	}
 
 	@media screen and (min-width: 63.75em) {
-		padding-top: 3.6875em;
+		padding-top: 3.45em;
+		padding-bottom: 61px;
 	}
 
 	&__lead {
-		margin-bottom: 14px;
+		margin-bottom: 25px;
 		
 		@media screen and (min-width: 48em) {
-			margin-bottom: 28px;
+			margin-bottom: 38px;
 		}
 		
 		@media screen and (min-width: 63.75em) {
-			margin-bottom: 57px;
+			margin-bottom: 44px;
 		}
 	}
 
@@ -31,6 +33,7 @@
 
 	&__subtitle {
 		line-height: 30px;
+		margin-right: 5px;
 	}
 	
 	

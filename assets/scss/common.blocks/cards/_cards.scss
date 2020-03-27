@@ -1,9 +1,9 @@
 .cards {
 	display: grid;
-	justify-items: center;
-	row-gap: 34px;
+	row-gap: 29px;
 	
 	@media screen and (min-width: 48em) {
+		row-gap: 34px;
 		column-gap: 15px;
 		grid-template-columns: repeat(3, 1fr);
 		grid-template-rows: repeat(1, 1fr);
@@ -16,31 +16,39 @@
 	&__item {
 		display: flex;
 		flex-direction: column;
-		max-width: 315px;
-		
-		@media screen and (min-width: 48em) {
-			max-width: 219px;
-		}
-	
-		@media screen and (min-width: 63.75em) {
-			max-width: 300px;
-		}
-		
+		max-width: 100%;
 	}
 	
 	&__title {
 		margin-top: 13px;
-		margin-bottom: 5px;
 		font-weight: 700;
 		text-overflow: ellipsis;
 		overflow: hidden;
 		white-space: nowrap;
+		
+		@media screen and (min-width: 48em) {
+			margin-bottom: 0px;
+			margin-top: 7px;
+		}
+	
+		@media screen and (min-width: 63.75em) {
+			margin-top: 12px;
+			margin-bottom: 5px;
+		}
 	}
-
+	
 	&__subtitle {
 		line-height: 21.56px;
-		margin-bottom: 24px;
+		margin-bottom: 11px;
 
+		@media screen and (min-width: 48em) {
+			margin-bottom: 10px;
+		}
+	
+		@media screen and (min-width: 63.75em) {
+			margin-bottom: 24px;
+		}
+		
 		&::first-line {
 			letter-spacing: 0.1px;
 		}
@@ -49,18 +57,9 @@
 	&__img {
 
 		object-fit: contain;
-		max-width: 314px;
-		max-height: 314px;
+		max-width: 100%;
+		flex-basis: 50%;
 
-		@media screen and (min-width: 48em) {
-			max-width: 219px;
-			max-height: 219px;
-		}
-
-		@media screen and (min-width: 63.75em) {
-			max-width: 300px;
-			max-height: 300px;
-		}
 	}
 
 
