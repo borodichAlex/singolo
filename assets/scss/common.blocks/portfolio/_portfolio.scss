@@ -1,23 +1,39 @@
 .portfolio {
-	padding-top: 1.56em;
+	padding-top: 2.3em;
+	padding-bottom: 2.1em;
 
 	background-color: #2d303a;
 	border-bottom: 6px solid #323746;
 
 	&__lead {
-		margin-bottom: 12px;
+		margin-bottom: 23px;
+		
+		@media screen and (min-width: 48em) {
+			padding-top: 12px;
+			margin-bottom: 17px;
+		}
+
+		@media screen and (min-width: 63.75em) {
+			margin-bottom: 13px;
+		}
 	}
 
 	&__title {
 		margin-bottom: 15px;
+		font-weight: 700;
+	}
+
+	&__subtitle {
+		letter-spacing: .2px;
 	}
 
 	@media screen and (min-width: 48em) {
-		padding-top: 2.4375em;
+		padding-top: 2.55em;
+		padding-bottom: 0;
 	}
 
 	@media screen and (min-width: 63.75em) {
-		padding-top: 3.6875em;
+		padding-top: 2.65em;
 	}
 	
 }
