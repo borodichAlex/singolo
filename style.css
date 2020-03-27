@@ -830,8 +830,7 @@ body.is-open-menu {
 }
 .cards__img {
   object-fit: contain;
-  max-width: 100%;
-  flex-basis: 50%;
+  width: 100%;
 }
 
 .socials {
