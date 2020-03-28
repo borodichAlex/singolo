@@ -418,13 +418,25 @@ body.is-open-menu {
 .slider__slide--current {
   order: -1;
 }
-.slider__slide--current .telephone {
+.slider__slide--current .telephone--animationRight {
   animation-name: slide-move-right;
+  animation-duration: 2s;
+}
+.slider__slide--current .telephone--animationLeft {
+  animation-name: slide-move-left;
   animation-duration: 2s;
 }
 @keyframes slide-move-right {
   0% {
     transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slide-move-left {
+  0% {
+    transform: translateX(-100%);
   }
   100% {
     transform: translateX(0);
@@ -830,8 +842,7 @@ body.is-open-menu {
 }
 .cards__img {
   object-fit: contain;
-  max-width: 100%;
-  flex-basis: 50%;
+  width: 100%;
 }
 
 .socials {
