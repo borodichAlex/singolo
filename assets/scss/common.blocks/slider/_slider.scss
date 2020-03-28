@@ -11,18 +11,21 @@
 		background-color: #f06c64;
 		border-bottom: 6px solid #ea676b;
 		
+		padding-top: 20px;
+		padding-bottom: 24px;
+		
 		flex: 0 0 100%;
 		max-width: 100%;
 		order: 0;
 		
 		display: flex;
-		padding-left: 10%;
-		padding-right: 10%;
+		padding-right: 15%;
+		justify-content: center;
 
 		
 		@media screen and (min-width: 48em) {
 			padding-top: 41px;
-			padding-bottom: 65px;
+			padding-bottom: 58px;
 		}
 		
 		@media screen and (min-width: 63.75em) {
@@ -35,35 +38,52 @@
 			border-bottom: 6px solid rgb(68, 118, 247);
 			
 			background-image: url('./assets/images/slider/slider-bg.png');
+			background-position: 7px center;
 			background-repeat: no-repeat;
-			background-size: contain;
+			background-size: cover;
 			
 			justify-content: center;
+
+			padding-right: 0;
 		}
 		
 		&--current {
 			order: -1;
-			
-			& .telephone {
+
+			& .telephone--animationRight {
 				animation-name: slide-move-right;
 				animation-duration: 2s;
+			}
+			
+			& .telephone--animationLeft {
+				animation-name: slide-move-left;
+				animation-duration: 2s;
+			}
+		
+			@keyframes slide-move-right {
+				0% {
+					transform: translateX(100%);
+				}
+				100% {
+					transform: translateX(0);
+				}
+			}
+			
+			@keyframes slide-move-left {
+				0% {
+					transform: translateX(-100%);
+				}
+				100% {
+					transform: translateX(0);
+				}
 			}
 		}
 		
 	}
 
-	@keyframes slide-move-right {
-		0% {
-			transform: translateX(100%);
-		}
-		100% {
-			transform: translateX(0);
-		}
-	}
-
 	&__arrow {
 		position: absolute;
-		top: 47.3%;
+		top: 44%;
 		line-height: 0;
 		
 		&:hover {
@@ -72,17 +92,29 @@
 		}
 
 		&--left {
-			left: 5px;
+			left: 9px;
 		}
 
 		&--right {
-			right: 5px;
+			right: 9px;
 			transform: rotate(180deg);
 		}
 
 		@media screen and (min-width: 48em) {
+			top: 47%;
+
 			&--left {
-				left: 42px;
+				left: 29px;
+			}
+
+			&--right {
+				right: 28px;
+			}
+		}
+
+		@media screen and (min-width: 63.75em) {
+			&--left {
+				left: 40px;
 			}
 
 			&--right {

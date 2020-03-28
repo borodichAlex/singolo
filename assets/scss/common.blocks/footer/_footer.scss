@@ -2,17 +2,27 @@
 
 	background-color: #2d303a;
 
+	padding-top: 1.4em;
+	padding-bottom: 1.1em;
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
+	justify-content: center;
+
+	@media screen and (min-width: 48em) {
+		justify-content: space-between;
+	}
 
 	&__address {
-		font-size: 12px;
-		font-weight: 400;
-		color: #666d89;
-		font-style: normal;
-
-		padding: 29px 0;
+		display: none;
+		
+		@media screen and (min-width: 48em) {
+			display: inline;
+			
+			font-style: normal;
+			color: #666d89;
+			font-size: 13px;
+			font-weight: 400;
+		}
 	}
 
 }

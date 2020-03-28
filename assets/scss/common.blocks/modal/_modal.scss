@@ -15,14 +15,18 @@
 		z-index: 110;
 		position: fixed;
 		top: 15%;
-		bottom: 15%;
-		left: 20%;
-		right: 20%;
+		left: 10%;
+		right: 10%;
 		overflow: auto;
 		background-color: #f06b64e0;
 		border-radius: 1em;
 		padding: 3em;
 		color: $color-header-text;
+
+		@media screen and (min-width: 48em) {
+			left: 20%;
+			right: 20%;
+		}
 
 		> * + * {
 			margin-top: 1em;

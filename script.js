@@ -17,7 +17,7 @@ let addLinkActive = (link) => {
 document.onscroll = function showHeader() {
 	let heightBlocks = blocksNavMenu.map(block => block.offsetTop)
 	let header = document.querySelector('#header');
-	let top = header.offsetTop + header.offsetHeight;
+	let top = header.offsetTop + header.offsetHeight + 10;
 
 	(globalThis.pageYOffset > header.clientHeight) ? header.classList.add('header--fixed') : header.classList.remove('header--fixed');
 
@@ -31,8 +31,6 @@ document.onscroll = function showHeader() {
 navMenu.addEventListener("click", (event) => {
 	event.preventDefault();
 	let prevLink = itemsNavMenu.findIndex(link => link.attributes.href.textContent === event.target.attributes.href.textContent);
-
-	addLinkActive(prevLink)
 
 	if (prevLink !== 0) {
 		document.querySelector('html').scrollTop = blocksNavMenu[prevLink].offsetTop - blocksNavMenu[0].offsetHeight;
@@ -63,29 +61,53 @@ let arrowRight = document.querySelector('.slider__arrow--right');
 let arrowLeft = document.querySelector('.slider__arrow--left');
 let bodySlider = document.querySelector('.slider__body');
 
-let addSlideActive = (prevSlide, curSlide) => {
-	slides[prevSlide].classList.remove('slider__slide--current')
+let changeArrow = arrow => {
+	[...document.querySelectorAll('.slider__arrow img')].forEach(item => {
+		item.src = arrow;
+	})
+};
+
+let addSlideActive = (prevSlide, curSlide, arrow) => {
+	slides[prevSlide].classList.remove('slider__slide--current');
+	let right = "telephone--animationRight";
+	let left = "telephone--animationLeft";
+
+	[...slides[curSlide].children].forEach(item => {
+		item.classList.remove(right);
+		item.classList.remove(left);
+		item.classList.add(arrow);
+	});
+
+	if (slides[curSlide].classList.contains('slider__slide--bg_primary')) {
+		changeArrow('./assets/images/slider/slider-icon-arrow-left-v2.svg')
+	} else {
+		changeArrow('./assets/images/slider/slider-icon-arrow-left.svg')
+	}
+
 	slides[curSlide].classList.add('slider__slide--current');
 }
 
+
 arrowRight.addEventListener("click", (event) => {
-	let prevSlide = slides.findIndex(slide => slide.classList.contains('slider__slide--current'))
+	let prevSlide = slides.findIndex(slide => slide.classList.contains('slider__slide--current'));
+	let right = "telephone--animationRight";
 
 	if (prevSlide >= slides.length - 1) {
-		addSlideActive(prevSlide, 0);
+		addSlideActive(prevSlide, 0, right);
 	} else {
-		addSlideActive(prevSlide, prevSlide + 1);
+		addSlideActive(prevSlide, prevSlide + 1, right);
 	}
 
 }, false);
 
 arrowLeft.addEventListener("click", (event) => {
 	let prevSlide = slides.findIndex(slide => slide.classList.contains('slider__slide--current'))
+	let left = "telephone--animationLeft";
 
 	if (prevSlide <= 0) {
-		addSlideActive(prevSlide, slides.length - 1)
+		addSlideActive(prevSlide, slides.length - 1, left)
 	} else {
-		addSlideActive(prevSlide, prevSlide - 1)
+		addSlideActive(prevSlide, prevSlide - 1, left)
 	}
 
 }, false);

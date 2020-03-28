@@ -4,9 +4,8 @@
 
 	&.is-open {
 		z-index: 30;
-		margin-right: 50%;
+		margin-right: 30%;
 	}
-
 
 	@media screen and (min-width: 48em) {
 		order: -1;
